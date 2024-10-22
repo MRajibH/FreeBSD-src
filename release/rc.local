@@ -103,7 +103,7 @@ if [ $? -eq 0 ]; then
 else
 	# Serial or other console
 	echo
-	echo "Welcome to pfSense!"
+	echo "Welcome to iCyberHunt!"
 	echo
 	echo "Please choose the appropriate terminal type for your system."
 	echo "Common console types are:"
@@ -123,10 +123,10 @@ resizewin -z
 
 if [ -f /etc/installerconfig ]; then
 	if bsdinstall script /etc/installerconfig; then
-		bsddialog --backtitle "pfSense Installer" --title "Complete" --no-cancel --ok-label "Reboot" --pause "Installation of pfSense complete! Rebooting in 10 seconds" 10 30 10
+		bsddialog --backtitle "iCyberHunt Installer" --title "Complete" --no-cancel --ok-label "Reboot" --pause "Installation of ICyberHunt complete! Rebooting in 10 seconds" 10 30 10
 		reboot
 	else
-		bsddialog --backtitle "pfSense Installer" --title "Error" --textbox /tmp/bsdinstall_log 0 0
+		bsddialog --backtitle "iCyberHunt Installer" --title "Error" --textbox /tmp/bsdinstall_log 0 0
 	fi
 	exit 
 fi
@@ -134,78 +134,34 @@ fi
 msg=$(cat <<EOD
 \ZbCopyright and Trademark Notices.\ZB
 
-Copyright 2004-2016. Electric Sheep Fencing, LLC ("ESF").
+Copyright 2004-2023. Brotecs Technologies Limited ("Brotecs").
 All Rights Reserved.
 
-Copyright 2014-2023. Rubicon Communications, LLC d/b/a Netgate ("Netgate").
-All Rights Reserved.
+All logos, text, and content of Brotecs, including underlying HTML code, designs, and graphics used and/or depicted herein are protected under United States and international copyright and trademark laws and treaties, and may not be used or reproduced without the prior express written permission of Brotecs.
 
-All logos, text, and content of ESF and/or Netgate, including underlying
-HTML code, designs, and graphics used and/or depicted herein are
-protected under United States and international copyright and trademark
-laws and treaties, and may not be used or reproduced without the prior
-express written permission of ESF and/or Netgate.
+"iCyberhunt" is a trademark of Brotecs and may not be used without the prior express written permission of Brotecs. All other trademarks shown herein are owned by the respective companies or persons indicated.
 
-"pfSense" is a registered trademark of ESF, exclusively licensed to
-Netgate, and may not be used without the prior express written
-permission of ESF and/or Netgate. All other trademarks shown herein are
-owned by the respective companies or persons indicated.
+iCyberhunt software is open source and distributed under the Apache 2.0 license. However, no commercial distribution of Brotecs software is allowed without the prior written consent of Brotecs.
 
-pfSense(R) software is open source and distributed under the Apache 2.0
-license.  However, no commercial distribution of ESF and/or Netgate
-software is allowed without the prior written consent of ESF and/or
-Netgate.
-
-ESF and/or Netgate make no warranty of any kind, including but not
-limited to the implied warranties of merchantability and fitness for a
-particular purpose.  ESF and/or Netgate shall not be liable for errors
-contained herein or for any direct, indirect, special, incidental or
-consequential damages in connection with the furnishing, performance, or
-use of any software, information, or material.
+Brotecs makes no warranty of any kind, including but not limited to the implied warranties of merchantability and fitness for a particular purpose. Brotecs shall not be liable for errors contained herein or for any direct, indirect, special, incidental, or consequential damages in connection with the furnishing, performance, or use of any software, information, or material.
 
 \ZbRestricted Rights Legend.\ZB
 
-No part of ESF and/or Netgate's information or materials may be
-published, distributed, reproduced, publicly displayed, used to create
-derivative works, or translated to another language, without the prior
-written consent of ESF and/or Netgate. The information contained herein
-is subject to change without notice.
+No part of Brotecs' information or materials may be published, distributed, reproduced, publicly displayed, used to create derivative works, or translated to another language, without the prior written consent of Brotecs. The information contained herein is subject to change without notice.
 
-Use, duplication or disclosure by the U.S. Government may be subject to
-restrictions as set forth in subparagraph (c) (1) (ii) of the Rights in
-Technical Data and Computer Software clause at DFARS 252.227-7013 for
-DOD agencies, and subparagraphs (c) (1) and (c) (2) of the Commercial
-Computer Software Restricted Rights clause at FAR 52.227-19 for other
-agencies.
+Use, duplication, or disclosure by the U.S. Government may be subject to restrictions as set forth in subparagraph (c) (1) (ii) of the Rights in Technical Data and Computer Software clause at DFARS 252.227-7013 for DOD agencies, and subparagraphs (c) (1) and (c) (2) of the Commercial Computer Software Restricted Rights clause at FAR 52.227-19 for other agencies.
 
 \ZbRegulatory/Export Compliance.\ZB
 
-The export and re-export of software is controlled for export purposes
-by the U.S. Government. By accepting this software and/or documentation,
-Licensee agrees to comply with all U.S. and foreign export laws and
-regulations as they relate to software and related documentation.
-Licensee will not export or re-export outside the United States software
-or documentation, whether directly or indirectly, to any Prohibited
-Party and will not cause, approve or otherwise intentionally facilitate
-others in so doing. A Prohibited Party includes: a party in a U.S.
-embargoed country or country the United States has named as a supporter
-of international terrorism; a party involved in proliferation; a party
-identified by the U.S. Government as a Denied Party; a party named on
-the U.S. Government's Enemies List; a party prohibited from
-participation in export or re-export transactions by a U.S. Government
-General Order; a party listed by the U.S. Government's Office of Foreign
-Assets Control as ineligible to participate in transactions subject to
-U.S. jurisdiction; or any party that Licensee knows or has reason to
-know has violated or plans to violate U.S. or foreign export laws or
-regulations. Licensee shall ensure that each of its software users
-complies with U.S. and foreign export laws and regulations as they
-relate to software and related documentation.
+The export and re-export of software is controlled for export purposes by the U.S. Government. By accepting this software and/or documentation, Licensee agrees to comply with all U.S. and foreign export laws and regulations as they relate to software and related documentation. Licensee will not export or re-export outside the United States software or documentation, whether directly or indirectly, to any Prohibited Party and will not cause, approve, or otherwise intentionally facilitate others in so doing. A Prohibited Party includes: a party in a U.S. embargoed country or country the United States has named as a supporter of international terrorism; a party involved in proliferation; a party identified by the U.S. Government as a Denied Party; a party named on the U.S. Government's Enemies List; a party prohibited from participation in export or re-export transactions by a U.S. Government General Order; a party listed by the U.S. Government's Office of Foreign Assets Control as ineligible to participate in transactions subject to U.S. jurisdiction; or any party that Licensee knows or has reason to know has violated or plans to violate U.S. or foreign export laws or regulations. Licensee shall ensure that each of its software users complies with U.S. and foreign export laws and regulations as they relate to software and related documentation.
+
+Developed by Cloud and DevSecOps team of Brotecs Technologies Limited.
 EOD
 )
 
 if [ ! -f /tmp/buildroom ]; then
 	exec 3>&1
-	bsddialog --backtitle "pfSense Installer" \
+	bsddialog --backtitle "iCyberHunt Installer" \
 		--title "Copyright and distribution notice" \
 		--ok-label "Accept" \
 		--colors \
@@ -214,7 +170,7 @@ if [ ! -f /tmp/buildroom ]; then
 fi
 
 IOPTS="\
-\"Install\" \"Install pfSense\" \
+\"Install\" \"Install iCyberHunt\" \
 \"Rescue Shell\" \"Launch a shell for rescue operations\""
 
 if [ -x /root/recover_configxml.sh ] ; then
@@ -222,9 +178,9 @@ if [ -x /root/recover_configxml.sh ] ; then
 fi
 
 exec 3>&1
-IMODE=`echo ${IOPTS} | xargs dialog --backtitle "pfSense Installer" \
+IMODE=`echo ${IOPTS} | xargs dialog --backtitle "iCyberHunt Installer" \
 	--title "Welcome" \
-	--menu "Welcome to pfSense!" \
+	--menu "Welcome to iCyberHunt!" \
 	0 0 0 2>&1 1>&3` || exit 1
 exec 3>&-
 
@@ -272,11 +228,11 @@ case "$IMODE" in
 /$ZFSBOOT_BEROOT_NAME/$ZFSBOOT_BOOTFS_NAME/var_cache_pkg	mountpoint=/var/cache/pkg,setuid=off,exec=off
 /$ZFSBOOT_BEROOT_NAME/$ZFSBOOT_BOOTFS_NAME/var_db_pkg		mountpoint=/var/db/pkg,setuid=off,exec=off
 " \
-		ZFSBOOT_POOL_NAME=pfSense \
+		ZFSBOOT_POOL_NAME=iCyberHunt \
 		ZFSBOOT_SWAP_SIZE=1g \
 		bsdinstall
 	if [ $? -eq 0 ]; then
-		bsddialog --backtitle "pfSense Installer" --title "Complete" --yes-label "Reboot" --no-label "Shell" --yesno "Installation of pfSense complete! Would you like to reboot into the installed system now?" 0 0 && reboot
+		bsddialog --backtitle "iCyberHunt Installer" --title "Complete" --yes-label "Reboot" --no-label "Shell" --yesno "Installation of iCyberHunt complete! Would you like to reboot into the installed system now?" 0 0 && reboot
 		clear
 		echo "When finished, type 'exit' to reboot."
 		/bin/sh
