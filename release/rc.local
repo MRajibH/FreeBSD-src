@@ -206,8 +206,8 @@ case "$IMODE" in
 		BSDINSTALL_SKIP_USERS=y \
 		DISTRIBUTIONS="base.txz" \
 		NETCONFIG_DONE=yes \
-		OSNAME=pfSense \
-		ROOTPASS_PLAIN=pfsense \
+		OSNAME=iCyberhunt \
+		ROOTPASS_PLAIN=icyberhunt \
 		ZFSBOOT_DATASETS="
 /$ZFSBOOT_BEROOT_NAME	mountpoint=none
 /$ZFSBOOT_BEROOT_NAME/$ZFSBOOT_BOOTFS_NAME	mountpoint=/
