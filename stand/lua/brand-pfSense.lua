@@ -25,6 +25,7 @@
 -- SUCH DAMAGE.
 --
 -- $FreeBSD$
+-- this is a test line
 --
 
 local drawer = require("drawer")
