@@ -134,14 +134,14 @@ fi
 msg=$(cat <<EOD
 \ZbCopyright and Trademark Notices.\ZB
 
-Copyright 2004-2023. Brotecs Technologies Limited ("Brotecs").
+Copyright 2024. Brotecs Technologies Limited ("Brotecs").
 All Rights Reserved.
 
 All logos, text, and content of Brotecs, including underlying HTML code, designs, and graphics used and/or depicted herein are protected under United States and international copyright and trademark laws and treaties, and may not be used or reproduced without the prior express written permission of Brotecs.
 
-"iCyberhunt" is a trademark of Brotecs and may not be used without the prior express written permission of Brotecs. All other trademarks shown herein are owned by the respective companies or persons indicated.
+"iCyberHunt" is a trademark of Brotecs and may not be used without the prior express written permission of Brotecs. All other trademarks shown herein are owned by the respective companies or persons indicated.
 
-iCyberhunt software is open source and distributed under the Apache 2.0 license. However, no commercial distribution of Brotecs software is allowed without the prior written consent of Brotecs.
+iCyberHunt software is open source and distributed under the Apache 2.0 license. However, no commercial distribution of Brotecs software is allowed without the prior written consent of Brotecs.
 
 Brotecs makes no warranty of any kind, including but not limited to the implied warranties of merchantability and fitness for a particular purpose. Brotecs shall not be liable for errors contained herein or for any direct, indirect, special, incidental, or consequential damages in connection with the furnishing, performance, or use of any software, information, or material.
 
@@ -206,7 +206,7 @@ case "$IMODE" in
 		BSDINSTALL_SKIP_USERS=y \
 		DISTRIBUTIONS="base.txz" \
 		NETCONFIG_DONE=yes \
-		OSNAME=iCyberhunt \
+		OSNAME=iCyberHunt \
 		ROOTPASS_PLAIN=icyberhunt \
 		ZFSBOOT_DATASETS="
 /$ZFSBOOT_BEROOT_NAME	mountpoint=none
