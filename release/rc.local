@@ -134,7 +134,7 @@ fi
 msg=$(cat <<EOD
 \ZbCopyright and Trademark Notices.\ZB
 
-Copyright 2024. Brotecs Technologies Limited ("Brotecs").
+Copyright 2024-2025. Brotecs Technologies Limited ("Brotecs").
 All Rights Reserved.
 
 All logos, text, and content of Brotecs, including underlying HTML code, designs, and graphics used and/or depicted herein are protected under United States and international copyright and trademark laws and treaties, and may not be used or reproduced without the prior express written permission of Brotecs.
