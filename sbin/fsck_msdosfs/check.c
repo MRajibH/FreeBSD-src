@@ -27,6 +27,8 @@
 
 
 #include <sys/cdefs.h>
+#include <sys/syslog.h>
+
 #ifndef lint
 __RCSID("$NetBSD: check.c,v 1.14 2006/06/05 16:51:18 christos Exp $");
 static const char rcsid[] =
@@ -85,8 +87,9 @@ checkfilesys(const char *fname)
 	}
 
 	if (skipclean && preen && checkdirty(dosfs, &boot)) {
-		printf("%s: ", fname);
-		printf("FILESYSTEM CLEAN; SKIPPING CHECKS\n");
+		// printf("%s: ", fname);
+		// printf("FILESYSTEM CLEAN; SKIPPING CHECKS\n");
+		syslog(LOG_INFO, "%s: FILESYSTEM CLEAN; SKIPPING CHECKS", fname);
 		ret = 0;
 		goto out;
 	}
