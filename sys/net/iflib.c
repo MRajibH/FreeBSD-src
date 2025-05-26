@@ -837,9 +837,12 @@ iflib_netmap_config(struct netmap_adapter *na, struct nm_config_info *info)
 	info->num_tx_descs = iflib_num_tx_descs(ctx);
 	info->num_rx_descs = iflib_num_rx_descs(ctx);
 	info->rx_buf_maxsize = fl->ifl_buf_size;
-	nm_prinf("txr %u rxr %u txd %u rxd %u rbufsz %u",
-		info->num_tx_rings, info->num_rx_rings, info->num_tx_descs,
-		info->num_rx_descs, info->rx_buf_maxsize);
+	// nm_prinf("txr %u rxr %u txd %u rxd %u rbufsz %u",
+	// 	info->num_tx_rings, info->num_rx_rings, info->num_tx_descs,
+	// 	info->num_rx_descs, info->rx_buf_maxsize);
+	log(LOG_INFO, "iflib: txr %u rxr %u txd %u rxd %u rbufsz %u\n",
+	    info->num_tx_rings, info->num_rx_rings, info->num_tx_descs,
+	    info->num_rx_descs, info->rx_buf_maxsize);
 
 	return 0;
 }
