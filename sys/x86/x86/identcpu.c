@@ -67,6 +67,8 @@
 #include <x86/isa/icu.h>
 #include <x86/vmware.h>
 
+#include <sys/syslog.h>
+
 #ifdef __i386__
 #define	IDENTBLUE_CYRIX486	0
 #define	IDENTBLUE_IBMCPU	1
