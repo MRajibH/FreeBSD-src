@@ -210,7 +210,7 @@ device		kbdmux			# keyboard multiplexer
 
 # syscons is the legacy console driver, resembling an SCO console
 device		vga			# VGA video card driver
-nodevice	splash			# Splash screen and screen saver support
+device		splash			# Splash screen and screen saver support
 device		sc
 options 	SC_PIXEL_MODE		# add support for the raster text mode
 
